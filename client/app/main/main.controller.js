@@ -8,6 +8,10 @@ angular.module('angularfullstackappApp')
       $scope.awesomeThings = awesomeThings;
     });
 
+    $scope.addEndPoint = function() {
+      $http.post('/api/newendpoints', { name: 'Tom', info: 'great guy', active: false });
+    };
+
     $scope.addThing = function() {
       if($scope.newThing === '') {
         return;
